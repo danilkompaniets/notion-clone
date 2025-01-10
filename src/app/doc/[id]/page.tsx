@@ -1,12 +1,18 @@
 "use client"
 
-import React from 'react';
+import React, {use} from 'react';
+import {Document} from "@/components/document";
 
-const DocumentPage = ({params: {id}}: { params: { id: string } }) => {
+const DocumentPage = (props: { params: Promise<{ id: string }> }) => {
+    const params = use(props.params);
+
+    const {
+        id
+    } = params;
 
     return (
         <div className={"flex flex-col flex-1 min-h-screen "}>
-            Doc
+            <Document id={id}/>
         </div>
     );
 };
