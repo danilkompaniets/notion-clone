@@ -10,6 +10,7 @@ export const Document = ({id}: { id: string }) => {
     const [isUpdating, startTransition] = useTransition()
     const [data, loading, error] = useDocumentData(doc(db, "documents", id))
 
+
     useEffect(() => {
 
     }, [data])
