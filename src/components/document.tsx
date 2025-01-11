@@ -1,5 +1,5 @@
 import {Input} from "@/components/ui/input";
-import {useEffect, useState, useTransition} from "react";
+import {FormEvent, useEffect, useState, useTransition} from "react";
 import {Button} from "@/components/ui/button";
 import {doc, updateDoc} from "firebase/firestore";
 import {db} from "../../firebase";
@@ -8,14 +8,14 @@ import {useDocumentData} from "react-firebase-hooks/firestore";
 export const Document = ({id}: { id: string }) => {
     const [input, setInput] = useState("")
     const [isUpdating, startTransition] = useTransition()
-    const [data, loading, error] = useDocumentData(doc(db, "documents", id))
+    const [data] = useDocumentData(doc(db, "documents", id))
 
 
     useEffect(() => {
 
     }, [data])
 
-    const updateTitle = (e) => {
+    const updateTitle = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (input.trim()) {
