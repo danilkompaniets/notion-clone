@@ -10,11 +10,11 @@ export const MyRoomProvider = ({roomId, children}: { roomId: string, children: R
     return (
         <RoomProvider
             initialPresence={{
-                cursor: null
+                cursor: null,
             }}
             id={roomId}
             initialStorage={{
-                people: new LiveList([new LiveObject({name: "Marie", age: 30})])
+                people: new LiveList([new LiveObject({name: "Marie", age: 30})]),
             }}
         >
             <ClientSideSuspense fallback={<LoadingSpinner/>}>

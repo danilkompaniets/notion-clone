@@ -4,7 +4,7 @@ import {FollowPointer} from "@/components/follow-pointer";
 
 export const LiveCursorProvider = ({children}: { children: React.ReactNode }) => {
     const [myPresence, updateMyPresence] = useMyPresence()
-    const others = useOthers()
+    const others = useOthers(user => user)
 
 
     function handlerPointerMove(e: PointerEvent<HTMLDivElement>) {

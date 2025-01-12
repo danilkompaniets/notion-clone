@@ -66,21 +66,32 @@ export const Sidebar = () => {
     }
 
     const menuOptions = (
-        <>
+        <div className={"flex flex-col w-full"}>
             <NewDocumentButton/>
             <div className="flex py-4 flex-col space-y-4 md:max-w-36">
                 {groupedData.owner.length === 0 ? (
                     <h2 className="text-gray-500 font-semibold text-sm">No documents found</h2>
                 ) : (
                     <>
-                        <h2 className="text-gray-500 text-center font-semibold text-sm">My Documents</h2>
+                        <h2 className="text-gray-500 font-semibold text-sm">My Documents</h2>
                         {groupedData.owner.map((doc) => (
                             <SidebarOption key={doc.id} href={`/doc/${doc.id}`} id={doc.id}/>
                         ))}
                     </>
                 )}
             </div>
-        </>
+
+            <div className="flex py-4 flex-col space-y-4  md:max-w-36">
+                {groupedData.editor.length > 0 && (
+                    <>
+                        <h2 className="text-gray-500 font-semibold text-sm">Shared Documents</h2>
+                        {groupedData.editor.map((doc) => (
+                            <SidebarOption key={doc.id} href={`/doc/${doc.id}`} id={doc.id}/>
+                        ))}
+                    </>
+                )}
+            </div>
+        </div>
     );
 
     return (

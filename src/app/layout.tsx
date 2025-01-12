@@ -4,6 +4,8 @@ import React from "react";
 import {ClerkProvider} from "@clerk/nextjs";
 import {Header} from "@/components/header";
 import {Sidebar} from "@/components/sidebar";
+import {Toaster} from "@/components/ui/sonner";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +28,7 @@ export default function RootLayout({
                   {children}
               </div>
           </div>
+          <Toaster/>
           </body>
       </html>
       </ClerkProvider>

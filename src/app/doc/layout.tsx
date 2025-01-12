@@ -1,11 +1,11 @@
 import React from 'react';
-import LiveblocksProvider from "@/components/liveblocks-provider";
+import MyLiveblocksProvider from "@/components/liveblocks-provider";
 
 const Layout = ({children}: { children: React.ReactNode }) => {
     return (
-        <LiveblocksProvider>
+        <MyLiveblocksProvider>
             {children}
-        </LiveblocksProvider>
+        </MyLiveblocksProvider>
     );
 };
 
