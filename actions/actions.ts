@@ -85,5 +85,22 @@ export async function inviteUserToDocument(roomId: string, email: string) {
         console.log("Error while inviting user to document")
         return {success: false};
     }
+}
+
+
+export async function removeUserFromDocument(roomId: string, email: string) {
+    try {
+        await adminDb
+            .collection("users")
+            .doc(email)
+            .collection("rooms")
+            .doc(roomId)
+            .delete()
+
+        return {success: true}
+    } catch {
+        console.log("Error while deleting user")
+        return {success: false};
+    }
 
 }

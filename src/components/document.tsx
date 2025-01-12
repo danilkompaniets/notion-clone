@@ -8,6 +8,7 @@ import {Editor} from "@/components/editor";
 import {useOwner} from "../../hooks/useOwner";
 import {DeleteDocument} from "@/components/delete-document";
 import {InviteUser} from "@/components/invite-user";
+import {ManageUsers} from "@/components/manage-users";
 
 export const Document = ({id}: { id: string }) => {
     const [input, setInput] = useState("")
@@ -50,11 +51,11 @@ export const Document = ({id}: { id: string }) => {
                     )}
                 </form>
             </div>
-            <div>
+            <div className={"flex max-w-6xl mx-auto justify-between pb-5"}>
                 {/* Manage users */}
                 <ManageUsers/>
 
-                {/* Avatars */}
+                <Avatars/>
             </div>
 
             <hr className={"pb-10"}/>
