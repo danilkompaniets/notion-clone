@@ -9,6 +9,7 @@ import {useCreateBlockNote} from "@blocknote/react";
 import "@blocknote/core/fonts/inter.css";
 import "@blocknote/shadcn/style.css";
 import stringToColor from "@/lib/utils";
+import {TranslateDocument} from "@/components/translate-document";
 
 type EditorProps = {
     doc: Y.Doc;
@@ -65,10 +66,11 @@ export const Editor = () => {
         return <div>Loading collaborative editor...</div>;
     }
 
+
     return (
         <div className="max-w-6xl mx-auto  flex-1 h-full bg-white p-5">
             <div className="flex items-center gap-2 justify-end mb-10">
-                {/* Add additional controls here */}
+                <TranslateDocument doc={doc}/>
             </div>
 
             <BlockNote doc={doc} provider={provider}/>

@@ -9,6 +9,7 @@ import {useOwner} from "../../hooks/useOwner";
 import {DeleteDocument} from "@/components/delete-document";
 import {InviteUser} from "@/components/invite-user";
 import {ManageUsers} from "@/components/manage-users";
+import {Avatars} from "@/components/avatars";
 
 export const Document = ({id}: { id: string }) => {
     const [input, setInput] = useState("")
@@ -60,7 +61,7 @@ export const Document = ({id}: { id: string }) => {
 
             <hr className={"pb-10"}/>
 
-            <Editor/>
+            <Editor />
 
         </div>
     )
