@@ -19,7 +19,7 @@ export const SidebarOption = ({href, id}: {
 
     return (
         <Link href={href} className={cn("w-full px-3 py-1 bg-transparent transition-colors rounded-md hover:bg-gray-100", isActive && "bg-gray-100")}>
-            <p className={"truncate text-md font-medium text-gray-700"}>
+            <p className={"truncate text-md flex gap-x-2 font-medium text-gray-700"}>
                 {data.title}
             </p>
         </Link>
