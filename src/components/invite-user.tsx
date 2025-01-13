@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog"
 import {FormEvent, useState, useTransition} from "react";
 import {Button} from "@/components/ui/button";
-import {usePathname, useRouter} from "next/navigation";
+import {usePathname} from "next/navigation";
 import {toast} from "sonner";
 import {Input} from "@/components/ui/input";
 import {inviteUserToDocument} from "../../actions/actions";
@@ -23,8 +23,6 @@ export const InviteUser = () => {
     const [isPending, startTransition] = useTransition()
 
     const pathname = usePathname()
-    const router = useRouter()
-
 
     const handleInvite = async (e: FormEvent) => {
         e.preventDefault()

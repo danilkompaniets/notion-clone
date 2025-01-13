@@ -46,7 +46,6 @@ export const TranslateDocument = ({doc}: TranslateDocumentProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [language, setLanguage] = useState<string>("")
     const [summary, setSummary] = useState("")
-    const [question, setQuestion] = useState("")
     const [isPending, startTransition] = useTransition()
 
     const handleAskQuestion = async (e: FormEvent) => {

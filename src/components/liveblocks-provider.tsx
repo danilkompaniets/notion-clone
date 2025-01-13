@@ -8,8 +8,6 @@ const MyLiveblocksProvider = ({children}: { children: React.ReactNode }) => {
         throw new Error("NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY is not provided");
     }
 
-    const pk = process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY;
-
     return (
         <LiveblocksProvider
             throttle={16}
@@ -21,4 +19,3 @@ const MyLiveblocksProvider = ({children}: { children: React.ReactNode }) => {
 };
 
 export default MyLiveblocksProvider;
-``
