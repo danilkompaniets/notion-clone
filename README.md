@@ -22,3 +22,5 @@
 - Создание адаптивного интерфейса с использованием Tailwind и shadcn-ui.  
 
 **Spaces** делает совместную работу проще и эффективнее!  
+
+![image](https://github.com/user-attachments/assets/10517a8c-747f-4779-9227-98d6449e9228)
